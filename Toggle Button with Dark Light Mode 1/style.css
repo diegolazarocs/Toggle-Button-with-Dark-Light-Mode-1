@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.dark {
+  background-color: rgba(16, 19, 54, 0.589);
+  color: rgba(23, 30, 115, 0.589);
+  font-size: 1.2rem;
+}
+h2 {
+  margin-bottom: 5rem;
+}
+#button {
+  display: none;
+}
+label {
+  width: 200px;
+  height: 100px;
+  background-color: lightgray;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+label::before {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+#button:checked + label::before {
+  transform: translateX(100px);
+  background-color: rgba(23, 30, 115, 0.589);
+  outline: 3px solid white;
+}
